@@ -1,0 +1,210 @@
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    background-color: #82346A;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 90%;
+    height: 3rem;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+
+.logo-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 40px;
+}
+
+.buscar {
+    display: flex;
+    width: 300px;
+    flex-wrap: nowrap;
+    background-color: #fff;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+.items-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 40px;
+    display: flex;
+    transition: .65s;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+li a {
+    color: white;
+}
+
+.sesion {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+input {
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+}
+
+.btn {
+    font-size: 15px;
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+.btn.registrar {
+    color: white;
+}
+
+.btn.login {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #00B0B0;
+    color: white;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.menu_container {
+    flex: 1;
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menu_hamburguer {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu_hamburguer div {
+    width: 1.6rem;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #fff;
+    position: relative;
+    z-index: 1001;
+}
+
+.menu_hamburguer div:before,
+.menu_hamburguer div:after {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: .5s;
+}
+
+.menu_hamburguer div:before {
+    transform: translateY(-7);
+}
+
+.menu_hamburguer div:after {
+    transform: translateY(7);
+}
+
+#check {
+    position: absolute;
+    top: 50%;
+    right: 0rem;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    z-index: 90000;
+    cursor: pointer;
+    opacity: 0;
+}
+
+#check:checked~.menu_container .menu_hamburguer div {
+    background-color: transparent;
+}
+
+#check:checked~.menu_container .menu_hamburguer div:before {
+    transform: translateY(0) rotate(-45deg);
+}
+
+#check:checked~.menu_container .menu_hamburguer div:after {
+    transform: translateY(0) rotate(45deg);
+}
+
+@media (max-width: 920px) {
+    #check {
+        display: block;
+    }
+    .menu_container {
+        display: flex;
+    }
+    .items-container {
+        position: fixed;
+        height: calc(100vh -3rem);
+        top: 3rem;
+        left: 0;
+        width: 100%;
+        background-color: #82346A;
+        display: none;
+        transition: .65s;
+    }
+    ul {
+        display: block;
+    }
+    li {
+        padding: 20px;
+    }
+    .sesion {
+        padding: 20px;
+    }
+    #check:checked~.items-container {
+        display: block;
+        transition: .65s;
+    }
+    .buscar {
+        width: 210px;
+    }
+}

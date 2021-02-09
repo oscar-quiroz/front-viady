@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "front-viady"
+    }
+  },
+  "defaultProject": "front-viady",
+  "cli": {
+    "analytics": "3b9ec8ce-e233-48a3-8cb8-f75438e94b08"
+  }
 }
