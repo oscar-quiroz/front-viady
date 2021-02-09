@@ -119,7 +119,7 @@ input:focus {
     height: 2.5rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .menu_hamburguer div {
@@ -129,6 +129,7 @@ input:focus {
     background-color: #fff;
     position: relative;
     z-index: 1001;
+    transition: .5s;
 }
 
 .menu_hamburguer div:before,
@@ -143,11 +144,11 @@ input:focus {
 }
 
 .menu_hamburguer div:before {
-    transform: translateY(-7);
+    transform: translateY(-7px);
 }
 
 .menu_hamburguer div:after {
-    transform: translateY(7);
+    transform: translateY(7px);
 }
 
 #check {
