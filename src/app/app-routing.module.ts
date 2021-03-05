@@ -11,6 +11,14 @@ const routes: Routes = [
   {
     path: 'dashboard',
       loadChildren: () => import('./protected/protected.module').then( m => m.ProtectedModule )
+  },{
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomeModule )
+  },
+  {
+    path:'**',
+    redirectTo: 'home'
+
   }
 
 
