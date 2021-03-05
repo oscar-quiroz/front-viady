@@ -11,7 +11,7 @@ header {
     top: 0px;
     background-color: #82346A;
     width: 100%;
-    z-index: 1000;
+    min-width: 360px;
 }
 
 .container {
@@ -207,5 +207,11 @@ input:focus {
     }
     .buscar {
         width: 210px;
+    }
+}
+
+@media (max-width: 400px) {
+    .buscar {
+        display: none;
     }
 }
