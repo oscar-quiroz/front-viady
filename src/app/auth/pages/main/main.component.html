@@ -1,13 +1,16 @@
-<app-nav></app-nav>
+<div style=" width: 100%;">
+    <app-nav></app-nav>
 
-<div class="container">
-    <div class="contenido">
-        <div class="imagen">
-            <img src="assets/fondo.svg" alt="">
+    <div class="container">
+        <div class="contenido">
+            <div class="imagen">
+                <img src="assets/fondo.svg" alt="">
+            </div>
+            <router-outlet> </router-outlet>
+
         </div>
-        <router-outlet> </router-outlet>
-
     </div>
-</div>
 
-<app-footer></app-footer>
+    <app-footer></app-footer>
+
+</div>
