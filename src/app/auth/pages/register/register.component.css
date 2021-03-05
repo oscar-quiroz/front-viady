@@ -1,6 +1,5 @@
 .container {
     display: flex;
-    background-color: white;
     justify-content: center;
     width: 100%;
 }
@@ -8,7 +7,7 @@
 .card {
     display: flex;
     flex-direction: column;
-    background-color: #f1f1f1;
+    background-color: #fff;
     font-size: 30px;
     width: 300px;
     padding: 20px 20px;
@@ -72,5 +71,17 @@ input::-webkit-input-placeholder {
     text-justify: center;
     text-align: center;
     font-size: 15px;
+    gap: 10px;
+}
+
+.form-cont {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.form-items {
+    display: flex;
+    flex-direction: column;
     gap: 10px;
 }
