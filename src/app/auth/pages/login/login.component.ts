@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
     }
   )
 
-  constructor( private fb:FormBuilder) {
+  constructor( private fb:FormBuilder,  private router:Router) {
   }
 
   ngOnInit(): void {
@@ -25,6 +26,7 @@ export class LoginComponent implements OnInit {
 
   mensaje(){
   console.log(this.myForm.value)
-  }
+  this.router.navigate(['/dashboard'])
+}
 
 }

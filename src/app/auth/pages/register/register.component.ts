@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { User } from '../../interfaces/user.interface';
 
 @Component({
@@ -25,7 +26,7 @@ export class RegisterComponent implements OnInit {
     }
   )
 
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder, private router:Router) { }
 
   ngOnInit(): void {
 
@@ -46,6 +47,7 @@ export class RegisterComponent implements OnInit {
      password:this.myForm.get('password')?.value,
     }
     console.log(this.user)
+    this.router.navigate(['/auth/login'])
     }
 
 
