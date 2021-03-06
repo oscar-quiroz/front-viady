@@ -1,5 +1,14 @@
 <div class="container">
 
+    <div class="alert" [class]="class">
+        <span class="fas fa-exclamation-circle"></span>
+        <span class="msg"> usuario registrado correctamente</span>
+        <span class="close-btn" (click)="hide()">
+                <span class="fas fa-times"></span>
+        </span>
+    </div>
+
+
     <div class="card">
         <div class="image-cont">
             <img src="assets/user2.jpg" width="200px" height="200px" alt="">
@@ -11,7 +20,7 @@
 
                 <div class="form-cont">
                     <div class="input-form">
-                        <input type="text" name="" id="" formControlName="name" placeholder="name">
+                        <input type="text" name="" (click)="mostrar()" id="" formControlName="name" placeholder="name">
                         <span class="message-error" *ngIf="validacion('name')">*  Minimo 3 cracteres</span>
                     </div>
                     <div class="input-form">
@@ -62,8 +71,11 @@
 
                 <p>¿ya tienes una cuenta? <a routerLink="/auth/login"> inicia sesion </a></p>
 
-                <p>invalid {{myForm.invalid}}</p>
-                <p> valid {{myForm.valid}}</p>
+
+
+
+
+
             </div>
         </form>
     </div>

@@ -10,7 +10,7 @@ import { User } from '../../interfaces/user.interface';
 })
 export class RegisterComponent implements OnInit {
 
-
+ class:string = 'hide';
   user:User
 
   myForm: FormGroup = this.fb.group(
@@ -47,11 +47,26 @@ export class RegisterComponent implements OnInit {
      password:this.myForm.get('password')?.value,
     }
     console.log(this.user)
-    this.router.navigate(['/auth/login'])
+
+    console.log("abrir")
+    //this.router.navigate(['/auth/login'])
     }
 
 
   validacion( input:string){
    return  this.myForm.controls[input].errors && this.myForm.controls[input].touched
   }
+
+
+  mostrar(){
+    this.class= "show"
+   // console.log
+  }
+
+
+  hide(){
+    this.class= "hide"
+   // console.log
+  }
+
 }
