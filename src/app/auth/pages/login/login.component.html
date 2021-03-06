@@ -9,8 +9,8 @@
         <form [formGroup]="myForm">
             <div class="form">
                 <div class="input-form">
-                    <input type="text" formControlName='user' placeholder="username">
-                    <span class="message-error" *ngIf="myForm.controls.user.errors && myForm.controls.user.touched">*  Debe superar el valor</span>
+                    <input type="text" formControlName='email' placeholder="username">
+                    <span class="message-error" *ngIf="myForm.controls.email.errors && myForm.controls.email.touched">*  Debe superar el valor</span>
                 </div>
                 <div class="input-form">
                     <input type="password" formControlName='password' placeholder="password">
@@ -19,7 +19,7 @@
 
 
                 <div class="button-cont">
-                    <button (click)="mensaje()" type="submit" class="btn" [disabled]="myForm.invalid"> Iniciar sesion </button>
+                    <button (click)="login()" type="submit" class="btn" [disabled]="myForm.invalid"> Iniciar sesion </button>
                 </div>
             </div>
 
