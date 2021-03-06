@@ -12,11 +12,11 @@
                 <div class="form-cont">
                     <div class="input-form">
                         <input type="text" name="" id="" formControlName="name" placeholder="name">
-                        <span class="message-error" *ngIf="validacion('name')">*  Debe superar el valor</span>
+                        <span class="message-error" *ngIf="validacion('name')">*  Minimo 3 cracteres</span>
                     </div>
                     <div class="input-form">
                         <input type="text" name="" id="" formControlName="lastname" placeholder="lastname">
-                        <span class="message-error" *ngIf="validacion('lastname')">*  Debe superar el valor</span>
+                        <span class="message-error" *ngIf="validacion('lastname')">*  Minimo 5 caracteres</span>
                     </div>
 
 
@@ -26,30 +26,30 @@
                 <div class="form-cont">
                     <div class="input-form">
                         <input type="number" name="" id="" formControlName="day" placeholder="day">
-                        <span class="message-error" *ngIf="validacion('day')">*  Debe superar el valor</span>
+                        <span class="message-error" *ngIf="validacion('day')">*  (0 - 31)</span>
                     </div>
                     <div class="input-form">
                         <input type="number" name="" id="" formControlName="month" placeholder="month">
-                        <span class="message-error" *ngIf="validacion('month')">*  Debe superar el valor</span>
+                        <span class="message-error" *ngIf="validacion('month')">* (0 - 12)</span>
                     </div>
                     <div class="input-form">
                         <input type="number" name="" id="" formControlName="year" placeholder="year">
-                        <span class="message-error" *ngIf="validacion('year')">*  Debe superar el valor</span>
+                        <span class="message-error" *ngIf="validacion('year')">*  (1900 - 2018)</span>
 
                     </div>
                 </div>
                 <div class="input-form">
                     <input type="text" name="" id="" formControlName="username" placeholder="username">
-                    <span class="message-error" *ngIf="validacion('username')">*  Debe superar el valor</span>
+                    <span class="message-error" *ngIf="validacion('username')">*  Minimo 5 caracteres</span>
                 </div>
                 <div class="input-form">
                     <input type="text" name="" id="" formControlName="email" placeholder="email">
-                    <span class="message-error" *ngIf="validacion('email')">*  Debe estar en formato mail (ejemplo@mail.com)</span>
+                    <span class="message-error" *ngIf="validacion('email')">*  Error en formato. ( ejemplo@mail.com )</span>
                 </div>
 
                 <div class="input-form">
                     <input type="text" name="" id="" formControlName="password" placeholder="password">
-                    <span class="message-error" *ngIf="validacion('password')">*  Debe superar el valor</span>
+                    <span class="message-error" *ngIf="validacion('password')">*  Debe contener minusculas y mayusculas</span>
                 </div>
 
             </div>

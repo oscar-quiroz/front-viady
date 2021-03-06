@@ -102,6 +102,7 @@ input::-webkit-input-placeholder {
 }
 
 .message-error {
-    color: red;
+    color: #82346A;
     font-size: 12px;
+    font-weight: bolder;
 }

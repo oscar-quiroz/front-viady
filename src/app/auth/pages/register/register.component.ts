@@ -14,14 +14,14 @@ export class RegisterComponent implements OnInit {
 
   myForm: FormGroup = this.fb.group(
     {
-      name:['', [Validators.required, Validators.minLength(5) ]],
+      name:['', [Validators.required, Validators.minLength(3) ]],
       lastname: ['', [Validators.required, Validators.minLength(5) ]],
       day:['', [Validators.required,Validators.min(0), Validators.max(31) ]],
       month:[, [Validators.required, Validators.min(0), Validators.max(12) ]],  
-      year:['', [Validators.required, Validators.min(1900) , Validators.max(2020)]] ,
+      year:['', [Validators.required, Validators.min(1900) , Validators.max(2018)]] ,
       username: ['', [Validators.required, Validators.minLength(5) ]],
       email: ['', [Validators.required, Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$') ]],
-      password: ['', [Validators.required, Validators.minLength(5) ]]
+      password: ['', [Validators.required  ]] // realizar patron de password
     }
   )
 
