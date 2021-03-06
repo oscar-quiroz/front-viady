@@ -64,6 +64,15 @@ input::-webkit-input-placeholder {
     background-color: #327e7e;
 }
 
+.btn:disabled {
+    background-color: #2e8686;
+}
+
+.btn:disabled:hover {
+    background-color: #2e8686;
+    cursor: auto;
+}
+
 .links {
     display: flex;
     justify-content: center;
@@ -84,4 +93,15 @@ input::-webkit-input-placeholder {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.message-error {
+    color: red;
+    font-size: 12px;
 }

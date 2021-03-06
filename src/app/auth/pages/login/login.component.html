@@ -6,23 +6,32 @@
         </div>
         <br>
 
-        <form class="form" action="">
-            <div>
-                <input type="text" name="" id="" placeholder="username">
-                <br>
-                <input type="password" placeholder="password">
-                <br>
+        <form [formGroup]="myForm">
+            <div class="form">
+                <div class="input-form">
+                    <input type="text" formControlName='user' placeholder="username">
+                    <span class="message-error" *ngIf="myForm.controls.user.errors && myForm.controls.user.touched">*  Debe superar el valor</span>
+                </div>
+                <div class="input-form">
+                    <input type="password" formControlName='password' placeholder="password">
+                    <span class="message-error" *ngIf="myForm.controls.password.errors && myForm.controls.password.touched">* Espacio requerido</span>
+                </div>
+
+
+                <div class="button-cont">
+                    <button (click)="mensaje()" type="submit" class="btn" [disabled]="myForm.invalid"> Iniciar sesion </button>
+                </div>
             </div>
 
-            <div class="button-cont">
-                <button class="btn"> Iniciar sesion </button>
-            </div>
 
-            <div class="links">
-                <a> olvidé mi contraseña</a>
-                <p>¿No tines cuenta? registrate <a routerLink="/auth/register"> aqui</a></p>
-            </div>
         </form>
+
+        <div class="links">
+            <br>
+            <a> olvidé mi contraseña</a>
+            <p>¿No tines cuenta? registrate <a routerLink="/auth/register"> aqui</a></p>
+
+        </div>
     </div>
 
 

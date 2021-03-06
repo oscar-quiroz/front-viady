@@ -59,6 +59,15 @@ input::-webkit-input-placeholder {
     outline: none;
 }
 
+.btn:disabled {
+    background-color: #2e8686;
+}
+
+.btn:disabled:hover {
+    background-color: #2e8686;
+    cursor: auto;
+}
+
 .btn:hover {
     cursor: pointer;
     background-color: #327e7e;
@@ -72,4 +81,15 @@ input::-webkit-input-placeholder {
     text-align: center;
     font-size: 15px;
     gap: 10px;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.message-error {
+    color: red;
+    font-size: 12px;
 }
